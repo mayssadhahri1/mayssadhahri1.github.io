@@ -68,13 +68,23 @@ window.PROFILE = {
   },
   "github": {
     "user": "mayssadhahri1",
-    "featured": [],
+    "featured": [
+      "docmind-rag-agent",
+      "careermatch-ai",
+      "smart-movie-recommendation-platform",
+      "order-microservices-kafka",
+      "vit-satellite-classifier",
+      "interntrack"
+    ],
     "featuredTopic": "portfolio",
     "exclude": [
-      "mayssadhahri1"
+      "mayssadhahri1",
+      "mayssadhahri1.github.io",
+      "sample-app"
     ],
     "showForks": false,
-    "_aide": "featured : noms exacts des dépôts à mettre « À la une ». Ou bien ajoute le topic 'portfolio' au dépôt sur GitHub. exclude : dépôts à cacher."
+    "_aide": "featured : dépôts « À la une » (ou ajoute le topic 'portfolio' sur GitHub). exclude : dépôts à cacher. hideWithoutDescription : un dépôt sans description reste caché ; dès que tu lui écris une description sur GitHub, il apparaît tout seul.",
+    "hideWithoutDescription": true
   },
   "stats": [
     {

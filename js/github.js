@@ -126,6 +126,8 @@
     return repos
       .filter((r) => !exclude.has(r.name.toLowerCase()))
       .filter((r) => CFG.showForks || !r.fork)
+      // Un dépôt sans description est caché : il apparaît dès qu'on lui en écrit une sur GitHub
+      .filter((r) => !CFG.hideWithoutDescription || (r.description && r.description.trim()))
       .map((r) => ({
         name: r.name,
         title: prettify(r.name),
