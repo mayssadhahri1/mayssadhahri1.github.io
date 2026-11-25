@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Badge · Mayssa Dhahri</title>
+  <!--
+    BADGE À IMPRIMER
+    1. Ouvrir ce fichier dans Chrome
+    2. Ctrl + P  →  Destination : votre imprimante (ou « Enregistrer au format PDF »)
+    3. Plus de paramètres  →  Échelle : 100 %  et cocher « Graphiques d'arrière-plan »
+    Le texte vient de data/profile.js et le QR code de assets/qr-code.svg
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif; width: 210mm; height: 297mm;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6mm;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .hint { font-size: 9pt; color: #778; }
+    /* Pointillés de découpe */
+    .cut { padding: 3mm; border: .3mm dashed #b8bccb; border-radius: 7mm; }
+    /* Badge : 100 x 145 mm (rentre dans un porte-badge standard) */
+    .badge {
+      width: 100mm; height: 145mm; border-radius: 5mm; overflow: hidden; color: #eef1f8;
+      display: flex; flex-direction: column; align-items: center; position: relative;
+      background: #0a0e1a;
+      background-image:
+        radial-gradient(70mm 50mm at 0% 0%, rgba(129,140,248,.35), transparent 70%),
+        radial-gradient(60mm 50mm at 100% 10%, rgba(94,234,212,.25), transparent 70%);
+    }
+    .top { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 6mm 6mm 0; }
+    .logo { width: 8mm; height: 8mm; border-radius: 2.2mm; background: linear-gradient(135deg,#5eead4,#818cf8); color: #0a0e1a; font-weight: 800; font-size: 8pt; display: grid; place-items: center; }
+    .dom { font-family: "JetBrains Mono", monospace; font-size: 6.5pt; color: #94a0bd; }
+    .ph { width: 30mm; height: 30mm; border-radius: 50%; padding: 1mm; background: linear-gradient(135deg,#5eead4,#818cf8); margin-top: 2mm; box-shadow: 0 0 12mm rgba(129,140,248,.45); }
+    .ph img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: #fff; display: block; }
+    .name { font-size: 19pt; font-weight: 800; letter-spacing: -.02em; margin-top: 3mm; }
+    .name #fn { color: #eef1f8; }
+    .name #ln { color: #5eead4; }
+    .role { font-size: 8.5pt; color: #c7d2fe; font-weight: 600; margin-top: .5mm; }
+    .school { font-size: 7pt; color: #94a0bd; }
+    .pill { display: flex; align-items: center; gap: 1.5mm; margin-top: 2.5mm; font-size: 7.5pt; font-weight: 700; color: #4ade80; background: rgba(34,197,94,.13); border: .3mm solid rgba(34,197,94,.45); padding: 1.2mm 3mm; border-radius: 99px; }
+    .pill i { width: 2mm; height: 2mm; border-radius: 50%; background: #22c55e; }
+    .apps { display: flex; gap: 2.2mm; margin-top: 3.5mm; }
+    .app { width: 9.5mm; height: 9.5mm; border-radius: 2.6mm; display: grid; place-items: center; background: rgba(255,255,255,.07); border: .25mm solid rgba(255,255,255,.14); }
+    .app svg { width: 4.6mm; height: 4.6mm; }
+    .app.wa { background: #22c55e; border-color: #22c55e; color: #052e16; }
+    .qrbox { margin-top: 4mm; background: #fff; border-radius: 4mm; padding: 2.2mm; }
+    .qrbox img { width: 36mm; height: 36mm; display: block; }
+    .scan { margin-top: 2.5mm; font-size: 9pt; font-weight: 800; }
+    .scan b { color: #5eead4; }
+    .sub { font-size: 6.5pt; color: #94a0bd; margin-top: .5mm; }
+  </style>
+</head>
+<body>
+  <div class="hint">Découpez sur les pointillés · papier épais · glissez dans un porte-badge</div>
+  <div class="cut">
+    <div class="badge">
+      <div class="top"><div class="logo">MD</div><div class="dom" id="dom">mayssadhahri1.github.io</div></div>
+      <div class="ph"><img src="../assets/img/photo.png" alt="Photo" /></div>
+      <div class="name"><span id="fn">Mayssa</span> <span id="ln">Dhahri</span></div>
+      <div class="role" id="tagline">Full-Stack · Mobile · Agents IA</div>
+      <div class="school" id="school">Élève-ingénieure Génie Logiciel · Polytechnique Sousse</div>
+      <div class="pill"><i></i><span id="avail">Je cherche un PFE dès février 2027</span></div>
+      <!-- Petites icônes qui rappellent les boutons du site -->
+      <div class="apps">
+        <div class="app wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></div>
+        <div class="app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <div class="app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+      </div>
+      <div class="qrbox"><img src="../assets/qr-code.svg" alt="QR code" /></div>
+      <div class="scan">Scannez-moi <b>→</b> CV · projets · contact</div>
+      <div class="sub">WhatsApp · LinkedIn · GitHub · Email en un clic</div>
+    </div>
+  </div>
+
+  <!-- Remplit le badge avec les données du portfolio (si elles changent, le badge suit) -->
+  <script src="../data/profile.js"></script>
+  <script>
+    (function () {
+      var P = window.PROFILE; if (!P) return;
+      document.getElementById('fn').textContent = P.identity.firstName;
+      document.getElementById('ln').textContent = P.identity.lastName;
+      document.getElementById('tagline').textContent = P.identity.tagline;
+      document.getElementById('avail').textContent = 'Je cherche un ' + P.identity.availability.replace('à partir de', 'dès');
+      document.getElementById('dom').textContent = P.site.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    })();
+  </script>
+</body>
+</html>

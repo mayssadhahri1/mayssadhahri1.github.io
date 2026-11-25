@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Référencement + aperçu du lien (LinkedIn, WhatsApp, Google) ===== -->
+  <title>Mayssa Dhahri · Élève-ingénieure Génie Logiciel · PFE 2027</title>
+  <meta name="description" content="Portfolio de Mayssa Dhahri, élève-ingénieure en génie logiciel (Polytechnique Sousse). Full-Stack, Mobile & Agents IA. Recherche un PFE à partir de février 2027." />
+  <meta name="author" content="Mayssa Dhahri" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mayssa Dhahri · PFE à partir de février 2027" />
+  <meta property="og:description" content="Full-Stack · Mobile · Agents IA. Projets, parcours, CV et contact." />
+  <meta property="og:url" content="https://mayssadhahri1.github.io/" />
+  <meta property="og:image" content="https://mayssadhahri1.github.io/assets/img/photo.png" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <link rel="icon" href="assets/img/photo.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Classe "js" ajoutée tout de suite : sans JavaScript, rien n'est caché -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <!-- Icônes réutilisables : <svg><use href="#i-nom"/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></symbol>
+      <symbol id="i-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M2 13h20"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+      <symbol id="i-brief" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+      <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></symbol>
+      <symbol id="i-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+      <symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+      <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></symbol>
+      <symbol id="i-tie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+      <symbol id="i-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6 7v2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V7M12 12v5"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo" aria-label="Haut de page"><span class="mark">MD</span><span>Mayssa Dhahri</span></a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#about">À propos</a>
+        <a href="#experience">Parcours</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Changer le thème"><svg><use href="#i-sun"/></svg></button>
+        <a class="btn btn-primary btn-sm" data-link="cv" href="#" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         1. ACCUEIL
+         ========================================================= -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="status anim" style="--d:.05s"><span class="dot"></span><span data-fill="availabilityLong">Disponible</span></div>
+          <p class="hello anim" style="--d:.15s">Bonjour, je suis</p>
+          <h1 class="anim" style="--d:.25s"><span data-fill="firstName"></span> <span class="grad-text" data-fill="lastName"></span></h1>
+          <div class="typed-line anim" style="--d:.35s" aria-live="polite"><span id="typed"></span><span class="cursor"></span></div>
+          <p class="lead anim" style="--d:.45s" data-fill="pitch"></p>
+          <ul class="facts anim" style="--d:.5s" id="facts"></ul>
+
+          <div class="hero-actions anim" style="--d:.6s">
+            <a class="btn btn-wa" data-link="whatsapp" href="#" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg> Me contacter sur WhatsApp</a>
+            <a class="btn btn-primary" data-link="cv" href="#" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg> Voir mon CV</a>
+          </div>
+          <div class="socials anim" style="--d:.7s">
+            <a class="icon-btn" data-link="linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg><use href="#i-in"/></svg></a>
+            <a class="icon-btn" data-link="github" href="#" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg><use href="#i-code"/></svg></a>
+            <a class="icon-btn" data-link="email" href="#" aria-label="Email" title="Email"><svg><use href="#i-mail"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-wrap anim-zoom">
+            <div class="halo"></div>
+            <div class="photo-ring"><img src="assets/img/photo.webp" alt="Photo de Mayssa Dhahri" width="340" height="340" /></div>
+            <!-- Technologies en orbite autour de la photo (remplies par le JS) -->
+            <div class="orbit" id="orbit" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chiffres clés -->
+      <div class="container">
+        <div class="stats anim" style="--d:.8s" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. À PROPOS : ce que j'apporte
+         ========================================================= -->
+    <section id="about">
+      <div class="container">
+        <header class="sec-head reveal"><span class="sec-num">01</span><div><h2>Ce que j'apporte à votre équipe</h2><p>Une ingénieure capable de livrer une fonctionnalité de bout en bout.</p></div></header>
+        <div class="why-grid" id="whyGrid"></div>
+        <div class="soft reveal" id="softSkills"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. PARCOURS : stages + formation
+         ========================================================= -->
+    <section id="experience">
+      <div class="container">
+        <header class="sec-head reveal"><span class="sec-num">02</span><div><h2>Parcours</h2><p>Cinq stages en entreprise et une formation d'ingénieur en génie logiciel.</p></div></header>
+        <div class="journey">
+          <div class="timeline" id="timeline"></div>
+          <aside class="side">
+            <div class="card reveal"><h3 class="card-title"><svg><use href="#i-cap"/></svg> Formation</h3><div id="eduList"></div></div>
+            <div class="card reveal"><h3 class="card-title"><svg><use href="#i-shield"/></svg> Certifications</h3><div id="certList"></div></div>
+            <div class="card reveal"><h3 class="card-title"><svg><use href="#i-globe"/></svg> Langues</h3><div id="langList"></div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROJETS : GitHub en direct + projets phares
+         ========================================================= -->
+    <section id="projects">
+      <div class="container">
+        <header class="sec-head reveal"><span class="sec-num">03</span><div><h2>Projets</h2><p>Mes dépôts GitHub sont synchronisés automatiquement : chaque nouveau projet apparaît ici tout seul.</p></div></header>
+
+        <div class="tabs reveal" role="tablist">
+          <button type="button" class="tab active" role="tab" aria-selected="true" data-tab="gh"><span class="live-dot"></span> GitHub en direct <span class="count" id="ghTabCount">…</span></button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="cv"><svg><use href="#i-star"/></svg> Projets phares <span class="count" id="cvTabCount"></span></button>
+        </div>
+
+        <!-- Onglet 1 : GitHub -->
+        <div class="tab-panel" id="panel-gh" role="tabpanel">
+          <div class="card gh-profile">
+            <img class="gh-avatar" id="ghAvatar" src="assets/img/photo.webp" alt="" width="56" height="56" />
+            <div class="gh-id">
+              <strong id="ghName">@mayssadhahri1</strong>
+              <a id="ghLink" href="#" target="_blank" rel="noopener">github.com/mayssadhahri1 ↗</a>
+            </div>
+            <div class="gh-stats">
+              <div><b id="ghRepos">–</b><span>dépôts</span></div>
+              <div><b id="ghLangs">–</b><span>langages</span></div>
+              <div><b id="ghLast">–</b><span>dernier push</span></div>
+            </div>
+            <div class="lang-bar" id="langBar" aria-label="Langages utilisés"></div>
+            <div class="lang-legend" id="langLegend"></div>
+          </div>
+          <div class="gh-tools">
+            <div class="search">
+              <svg><use href="#i-search"/></svg>
+              <input type="search" id="ghSearch" placeholder="Rechercher un projet ou une technologie…" aria-label="Rechercher un dépôt" />
+            </div>
+          </div>
+          <div class="filters" id="ghFilters" role="group" aria-label="Filtrer par langage"></div>
+          <div class="projects" id="ghGrid" aria-live="polite"></div>
+          <p class="gh-source" id="ghSource"></p>
+        </div>
+
+        <!-- Onglet 2 : projets phares du CV -->
+        <div class="tab-panel" id="panel-cv" role="tabpanel" hidden>
+          <div class="projects" id="projectsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. COMPÉTENCES
+         ========================================================= -->
+    <section id="skills">
+      <div class="container">
+        <header class="sec-head reveal"><span class="sec-num">04</span><div><h2>Compétences techniques</h2></div></header>
+        <div class="skills" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. CONTACT
+         ========================================================= -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-intro">
+            <span class="status"><span class="dot"></span> Disponible dès février 2027</span>
+            <h2>Vous avez un sujet de PFE ?<br><span class="grad-text">Parlons-en.</span></h2>
+            <p>Je serais ravie d'échanger avec votre équipe. Je réponds rapidement.</p>
+          </div>
+          <div class="contact-list" id="contactList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year">2026</span> Mayssa Dhahri · Conçu et développé par moi-même · Projets synchronisés avec l'API GitHub</div>
+  </footer>
+
+  <!-- Données, puis projets GitHub, puis logique de la page (l'ordre compte) -->
+  <script src="data/profile.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

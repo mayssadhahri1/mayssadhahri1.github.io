@@ -1,0 +1,64 @@
+# =============================================================
+#  CI/CD : tests puis mise en ligne automatique sur GitHub Pages
+#  Se lance à chaque "git push" sur la branche main.
+# =============================================================
+name: Tests et déploiement
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 5 * * *"    # chaque jour : rafraîchit la copie des dépôts GitHub
+  workflow_dispatch:        # permet aussi de lancer le workflow à la main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # ---------- 1. Tests ----------
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt opencv-python-headless
+      - name: Régénérer le QR code
+        run: python scripts/generate_qr.py
+      - name: Lancer les tests
+        run: python -m unittest discover -s tests -v
+
+  # ---------- 2. Déploiement (seulement si les tests passent) ----------
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Copie de secours des dépôts GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_github.py || echo "Copie GitHub ignorée (le site utilisera l'API en direct)"
+      - name: Préparer le dossier du site (sans les tests ni les scripts)
+        run: |
+          mkdir _site
+          cp -r index.html css js data assets _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
